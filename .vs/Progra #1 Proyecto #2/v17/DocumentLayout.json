@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\noderute.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\noderute.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\nodepoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\nodepoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\program.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\program.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\routelist.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,20 +27,16 @@
       "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\pointlist.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\program.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\program.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\filemanager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\filemanager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\noderute.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\noderute.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\nodepoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD86E1AC-F7CF-4DA9-B7A9-A7ACEC4E8DE2}|Progra #1 Proyecto #2\\Progra #1 Proyecto #2.vcxproj|solutionrelative:Progra #1 Proyecto #2\\nodepoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,83 +66,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "routelist.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\routelist.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\routelist.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\routelist.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\routelist.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T17:22:31.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:22:31.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "pointlist.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\pointlist.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\pointlist.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\pointlist.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\pointlist.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T17:22:17.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:22:17.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "nodepoint.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\nodepoint.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\nodepoint.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\nodepoint.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\nodepoint.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T17:22:06.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:22:06.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "noderute.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\noderute.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\noderute.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\noderute.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\noderute.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T17:21:51.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:21:51.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "filemanager.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\filemanager.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\filemanager.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\filemanager.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\filemanager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T17:05:06.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "graphics.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\graphics.h",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.h",
               "RelativeToolTip": "Progra #1 Proyecto #2\\graphics.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T17:04:31.124Z"
+              "WhenOpened": "2024-10-17T17:04:31.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "graphics.cpp",
+              "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.cpp",
+              "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\graphics.cpp",
+              "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\graphics.cpp",
+              "RelativeToolTip": "Progra #1 Proyecto #2\\graphics.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-22T18:39:03.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "program.h",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\program.h",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\program.h",
@@ -151,13 +165,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\main.cpp",
               "RelativeDocumentMoniker": "Progra #1 Proyecto #2\\main.cpp",
               "ToolTip": "C:\\Users\\Alex\\Proyectos de Programacion I\\Progra #1 Proyecto #2\\Progra #1 Proyecto #2\\main.cpp",
               "RelativeToolTip": "Progra #1 Proyecto #2\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-12T18:54:10.795Z",
               "EditorCaption": ""

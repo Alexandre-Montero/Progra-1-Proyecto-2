@@ -6,17 +6,17 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-using namespace sf;
 using namespace std;
 
 class graphics {
 private:
-	Texture mapTexture;
+	sf::Texture mapTexture;
+	sf::Sprite mapSprite;
 
 public:
-	bool loadMap(const std::string& filePath);
+	graphics();
+	void displayMap();
 
-	const Texture& getMapTexture() const;
 };
 
 #endif // GRAPHICS_H
