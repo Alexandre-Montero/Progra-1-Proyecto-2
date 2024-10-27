@@ -19,7 +19,7 @@ void graphics::displayMap() {
         }
 
         window.clear();
-        window.draw(mapSprite);  // Dibujar el sprite que contiene la textura
+        window.draw(mapSprite);
         window.display();
     }
 }
