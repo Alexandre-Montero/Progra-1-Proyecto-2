@@ -1,1 +1,22 @@
-﻿  Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe
+﻿  filemanager.cpp
+  graphics.cpp
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,53): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,53): warning C4244:         with
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,53): warning C4244:         [
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,53): warning C4244:             T=float
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,53): warning C4244:         ]
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,45): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,45): warning C4244:         with
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,45): warning C4244:         [
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,45): warning C4244:             T=float
+C:\Users\Alex\Proyectos de Programacion I\Progra (44,45): warning C4244:         ]
+  main.cpp
+  pointnode.cpp
+  rutenode.cpp
+  program.cpp
+  routelist.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 118 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe
