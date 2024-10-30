@@ -11,32 +11,34 @@ using namespace std;
 const int MAX_BUTTONS = 10;
 
 struct Button {
-	sf::RectangleShape shape;
-	std::string name;
+    sf::RectangleShape shape;
+    std::string name;
 
-	Button() = default;
+    Button() = default;
 
-	Button(float x, float y, float width, float height, sf::Color color, const std::string& buttonName) {
-		shape.setSize(sf::Vector2f(width, height));
-		shape.setPosition(x, y);
-		shape.setFillColor(color);
-		name = buttonName;
-	}
+    Button(float x, float y, float width, float height, sf::Texture& texture, const std::string& buttonName) {
+        shape.setSize(sf::Vector2f(width, height));
+        shape.setPosition(x, y);
+        shape.setTexture(&texture); 
+        name = buttonName;
+    }
 };
 
 class graphics {
 private:
-	sf::Texture mapTexture;
-	sf::Sprite mapSprite;
+    sf::Texture mapTexture;
+    sf::Texture addButtonTexture;
+    sf::Texture editButtonTexture;
+    sf::Texture deleteButtonTexture;
+    sf::Sprite mapSprite;
 
-	Button buttons[MAX_BUTTONS];
-	int buttonCount = 0;
+    Button buttons[MAX_BUTTONS];
+    int buttonCount = 0;
 
 public:
-	graphics();
-	void displayMap();
-	void addButton(float x, float y, float width, float height, sf::Color color, const std::string& name);
-
+    graphics();
+    void displayMap();
+    void addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name);
 };
 
 #endif // GRAPHICS_H

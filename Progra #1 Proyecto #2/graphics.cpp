@@ -3,21 +3,31 @@
 
 graphics::graphics() {
     if (!mapTexture.loadFromFile("MapCR.png")) {
-        std::cout << "Error al cargar la imagen MapCR.png" << std::endl;
+        std::cout << "Error al cargar la imagen MapCR.png\n";
     }
     else {
         mapSprite.setTexture(mapTexture);
         mapSprite.setPosition(0, 0);
     }
 
-    addButton(1196, 5, 50, 40, sf::Color::Red, "Boton1");
-    addButton(1196, 50, 50, 40, sf::Color::Green, "Boton2");
-    addButton(1196, 95, 50, 40, sf::Color::Blue, "Boton3");
+    if (!addButtonTexture.loadFromFile("AddBotton.png")) {
+        std::cout << "Error al cargar la imagen addButton.png\n";
+    }
+    if (!editButtonTexture.loadFromFile("editBotton.png")) {
+        std::cout << "Error al cargar la imagen editButton.png\n";
+    }
+    if (!deleteButtonTexture.loadFromFile("deleteBotton.png")) {
+        std::cout << "Error al cargar la imagen deleteButton\n";
+    }
+
+    addButton(1196, 5, 50, 40, addButtonTexture, "Boton1");
+    addButton(1196, 50, 50, 40, editButtonTexture, "Boton2");
+    addButton(1196, 95, 50, 40, deleteButtonTexture, "Boton3");
 }
 
-void graphics::addButton(float x, float y, float width, float height, sf::Color color, const std::string& name) {
+void graphics::addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name) {
     if (buttonCount < MAX_BUTTONS) {
-        buttons[buttonCount] = Button(x, y, width, height, color, name);
+        buttons[buttonCount] = Button(x, y, width, height, texture, name);
         buttonCount++;
     }
     else {

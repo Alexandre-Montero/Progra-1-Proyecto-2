@@ -1,2 +1,15 @@
-﻿  main.cpp
-  Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Debug\Progra #1 Proyecto #2.exe
+﻿  graphics.cpp
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,53): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,53): warning C4244:         with
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,53): warning C4244:         [
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,53): warning C4244:             T=float
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,53): warning C4244:         ]
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,45): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,45): warning C4244:         with
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,45): warning C4244:         [
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,45): warning C4244:             T=float
+C:\Users\ken09\source\repos\Progra-1-Proyecto-2\Progra (54,45): warning C4244:         ]
+  main.cpp
+  program.cpp
+  Generando código...
+  Progra #1 Proyecto #2.vcxproj -> C:\Users\ken09\source\repos\Progra-1-Proyecto-2\x64\Debug\Progra #1 Proyecto #2.exe
