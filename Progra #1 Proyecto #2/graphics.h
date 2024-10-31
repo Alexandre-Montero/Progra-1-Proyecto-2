@@ -1,5 +1,5 @@
 #ifndef GRAPHICS_H
-#define GRAPHICS_H
+#define GRAPHICS_Hw
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -30,6 +30,7 @@ private:
     sf::Texture addButtonTexture;
     sf::Texture editButtonTexture;
     sf::Texture deleteButtonTexture;
+    sf::Texture colorsButtonTexture;
     sf::Sprite mapSprite;
 
     Button buttons[MAX_BUTTONS];

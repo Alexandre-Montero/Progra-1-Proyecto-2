@@ -1,28 +1,31 @@
 #include "graphics.h"
-#include <iostream>
 
 graphics::graphics() {
     if (!mapTexture.loadFromFile("MapCR.png")) {
-        std::cout << "Error al cargar la imagen MapCR.png\n";
+        cout << "Error al cargar la imagen MapCR.png\n";
     }
     else {
         mapSprite.setTexture(mapTexture);
         mapSprite.setPosition(0, 0);
     }
 
-    if (!addButtonTexture.loadFromFile("AddBotton.png")) {
-        std::cout << "Error al cargar la imagen addButton.png\n";
+    if (!addButtonTexture.loadFromFile("AddButton.png")) {
+        cout << "Error al cargar la imagen addButton.png\n";
     }
-    if (!editButtonTexture.loadFromFile("editBotton.png")) {
-        std::cout << "Error al cargar la imagen editButton.png\n";
+    if (!editButtonTexture.loadFromFile("editButton.png")) {
+        cout << "Error al cargar la imagen editButton.png\n";
     }
-    if (!deleteButtonTexture.loadFromFile("deleteBotton.png")) {
-        std::cout << "Error al cargar la imagen deleteButton\n";
+    if (!deleteButtonTexture.loadFromFile("deleteButton.png")) {
+        cout << "Error al cargar la imagen deleteButton\n";
+    }
+    if (!colorsButtonTexture.loadFromFile("colorButton.png")) {
+        cout << "Error al cargar la imagen colorButton.png\n";
     }
 
-    addButton(1196, 5, 50, 40, addButtonTexture, "Boton1");
-    addButton(1196, 50, 50, 40, editButtonTexture, "Boton2");
-    addButton(1196, 95, 50, 40, deleteButtonTexture, "Boton3");
+    addButton(1196, 135, 50, 40, addButtonTexture, "Agregar Ruta");
+    addButton(1196, 180, 50, 40, editButtonTexture, "Editar Ruta");
+    addButton(1196, 225, 50, 40, deleteButtonTexture, "Borrar Ruta");
+    addButton(15, 400, 50, 40, colorsButtonTexture, "Paleta de Colores");
 }
 
 void graphics::addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name) {
@@ -31,7 +34,7 @@ void graphics::addButton(float x, float y, float width, float height, sf::Textur
         buttonCount++;
     }
     else {
-        std::cout << "No se pueden agregar más botones. Máximo alcanzado: " << MAX_BUTTONS << std::endl;
+        cout << "No se pueden agregar más botones. Máximo alcanzado: " << MAX_BUTTONS << std::endl;
     }
 }
 
