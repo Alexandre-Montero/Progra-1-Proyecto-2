@@ -1,15 +1,13 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
+#include <fstream>
+#include <iostream>
+#include <string>
 
-using namespace sf;
 using namespace std;
 
-class filemanager {
+class FileManager {
 private:
 
 public:
 
 };
-
