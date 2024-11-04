@@ -13,7 +13,16 @@ RouteNode::RouteNode(string name) {
     this->prev = nullptr;
 }
 
-string RouteNode::getName() {
+RouteList::~RouteList() {
+    RouteNode* current = head;
+    while (current != nullptr) {
+        RouteNode* next = current->getNext();
+        delete current;
+        current = next;
+    }
+}
+
+string RouteNode::getName() const{
     return this->name;
 }
 
@@ -21,11 +30,11 @@ PointList& RouteNode::getPointList() {
     return this->pointList;
 }
 
-RouteNode* RouteNode::getNext() {
+RouteNode* RouteNode::getNext() const{
     return this->next;
 }
 
-RouteNode* RouteNode::getPrev() {
+RouteNode* RouteNode::getPrev() const{
     return this->prev;
 }
 
@@ -33,7 +42,7 @@ void RouteNode::setName(string name) {
     this->name = name;
 }
 
-void RouteNode::setPointList(PointList pointList) {
+void RouteNode::setPointList(const PointList& pointList) {
     this->pointList = pointList;
 }
 
@@ -46,6 +55,10 @@ void RouteNode::setPrev(RouteNode* prev) {
 }
 
 // RouteList //
+
+RouteNode* RouteList::getHead() const {
+    return head;
+}
 
 RouteList::RouteList() {
     this->head = nullptr;
@@ -66,7 +79,7 @@ void RouteList::insertRoute(string name) {
     }
 }
 
-RouteNode* RouteList::searchRoute(string name) {
+RouteNode* RouteList::searchRoute(const string& name) const{
     RouteNode* current = head;
     while (current != nullptr) {
         if (current->getName() == name) {
@@ -77,7 +90,7 @@ RouteNode* RouteList::searchRoute(string name) {
     return nullptr;
 }
 
-bool RouteList::isUniqueName(string name) {
+bool RouteList::isUniqueName(const string& name) const{
     RouteNode* current = head;
     while (current != nullptr) {
         if (!current->getPointList().isUniqueName(name)) {
@@ -103,7 +116,7 @@ void RouteList::insertPointToRoute(string routeName) {
     }
 }
 
-void RouteList::removeRoute(string name) {
+void RouteList::removeRoute(const string& name) {
     if (head == nullptr) return;
 
     if (head->getName() == name) {
@@ -127,7 +140,7 @@ void RouteList::removeRoute(string name) {
     }
 }
 
-void RouteList::displayRoutes() {
+void RouteList::displayRoutes() const{
     RouteNode* current = head;
     while (current != nullptr) {
         std::cout << current->getName() << ", ";

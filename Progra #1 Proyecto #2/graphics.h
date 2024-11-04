@@ -1,5 +1,5 @@
 #ifndef GRAPHICS_H
-#define GRAPHICS_Hw
+#define GRAPHICS_H
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -15,13 +15,7 @@ struct Button {
     std::string name;
 
     Button() = default;
-
-    Button(float x, float y, float width, float height, sf::Texture& texture, const std::string& buttonName) {
-        shape.setSize(sf::Vector2f(width, height));
-        shape.setPosition(x, y);
-        shape.setTexture(&texture); 
-        name = buttonName;
-    }
+    Button(float x, float y, float width, float height, sf::Texture& texture, const std::string& buttonName);
 };
 
 class graphics {

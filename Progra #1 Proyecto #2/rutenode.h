@@ -1,5 +1,5 @@
-#ifndef RUTENODE_H
-#define RUTENODE_h
+#ifndef ROUTENODE_H
+#define ROUTENODE_H
 
 #include <iostream>
 #include "pointnode.h"
@@ -8,24 +8,25 @@ using namespace std;
 
 class RouteNode {
 private:
-    string name;
+    std::string name;
     PointList pointList;
     RouteNode* next;
     RouteNode* prev;
 
 public:
     RouteNode();
-    RouteNode(string name);
+    RouteNode(std::string name);
 
-    string getName();
+    std::string getName() const;
     PointList& getPointList();
-    RouteNode* getNext();
-    RouteNode* getPrev();
+    RouteNode* getNext() const;
+    RouteNode* getPrev() const;
 
-    void setName(string name);
-    void setPointList(PointList pointList);
+    void setName(std::string name);
+    void setPointList(const PointList& pointList);
     void setNext(RouteNode* next);
     void setPrev(RouteNode* prev);
+
 };
 
 class RouteList {
@@ -34,13 +35,16 @@ private:
 
 public:
     RouteList();
+    ~RouteList();
 
-    void insertRoute(string name);
-    RouteNode* searchRoute(string name);
-    bool isUniqueName(string name);
-    void insertPointToRoute(string name);
-    void removeRoute(string name);
-    void displayRoutes();
+    RouteNode* getHead() const;
+    void insertRoute(std::string name);
+    RouteNode* searchRoute(const std::string& name) const;
+    bool isUniqueName(const std::string& name) const;
+    void insertPointToRoute(std::string routeName);
+    void removeRoute(const std::string& name);
+    void displayRoutes() const;
+
 };
 
 #endif

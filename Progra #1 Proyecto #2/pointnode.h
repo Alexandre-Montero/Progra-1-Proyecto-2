@@ -1,5 +1,5 @@
 #ifndef POINTNODE_H
-#define POINTNODE_h
+#define POINTNODE_H
 
 #include <iostream>
 
@@ -7,40 +7,43 @@ using namespace std;
 
 class PointNode {
 private:
-	string name;
-	int x;
-	int y;
-	PointNode* next;
-	PointNode* prev;
+    std::string name;
+    int x;
+    int y;
+    PointNode* next;
+    PointNode* prev;
 
 public:
-	PointNode();
-	PointNode(string name, int x, int y);
+    PointNode();
+    PointNode(std::string name, int x, int y);
 
-	string getName();
-	int getX();
-	int getY();
-	PointNode* getNext();
-	PointNode* getPrev();
+    std::string getName() const;
+    int getX() const;
+    int getY() const;
+    PointNode* getNext() const;
+    PointNode* getPrev() const;
 
-	void setName(string name);
-	void setX(int x);
-	void setY(int y);
-	void setNext(PointNode* next);
-	void setPrev(PointNode* prev);
+    void setName(std::string name);
+    void setX(int x);
+    void setY(int y);
+    void setNext(PointNode* next);
+    void setPrev(PointNode* prev);
+
 };
 
 class PointList {
 private:
-	PointNode* head;
+    PointNode* head;
 
 public:
-	PointList();
+    PointList();
+    ~PointList();  // Destructor agregado
 
-	void insertPoint(string name, int x, int y);
-	bool isUniqueName(string name);
-	void displayPoints();
+    PointNode* getHead() const;
+    void insertPoint(std::string name, int x, int y);
+    bool isUniqueName(std::string name) const;
+    void displayPoints() const;
 
 };
 
-#endif
+#endif // POINTNODE_H

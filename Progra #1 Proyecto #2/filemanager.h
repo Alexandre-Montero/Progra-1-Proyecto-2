@@ -1,11 +1,13 @@
 #include <iostream>
+#include <fstream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
-class filemanager {
+class FileManager {
 private:
 
 public:
 
 };
-

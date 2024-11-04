@@ -1,5 +1,12 @@
 #include "graphics.h"
 
+Button::Button(float x, float y, float width, float height, sf::Texture& texture, const std::string& buttonName) {
+    shape.setSize(sf::Vector2f(width, height));
+    shape.setPosition(x, y);
+    shape.setTexture(&texture);
+    name = buttonName;
+}
+
 graphics::graphics() {
     if (!mapTexture.loadFromFile("MapCR.png")) {
         cout << "Error al cargar la imagen MapCR.png\n";
@@ -32,9 +39,8 @@ void graphics::addButton(float x, float y, float width, float height, sf::Textur
     if (buttonCount < MAX_BUTTONS) {
         buttons[buttonCount] = Button(x, y, width, height, texture, name);
         buttonCount++;
-    }
-    else {
-        cout << "No se pueden agregar más botones. Máximo alcanzado: " << MAX_BUTTONS << std::endl;
+    } else {
+        cout << "No se pueden agregar mas botones. Maximo alcanzado: " << MAX_BUTTONS << std::endl;
     }
 }
 
@@ -47,16 +53,14 @@ void graphics::displayMap() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            if (event.type == sf::Event::MouseButtonPressed) {
-                if (event.mouseButton.button == sf::Mouse::Left) {
-                    int mouseX = event.mouseButton.x;
-                    int mouseY = event.mouseButton.y;
+            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
+                int mouseX = event.mouseButton.x;
+                int mouseY = event.mouseButton.y;
 
-                    for (int i = 0; i < buttonCount; i++) {
-                        sf::FloatRect bounds = buttons[i].shape.getGlobalBounds();
-                        if (bounds.contains(mouseX, mouseY)) {
-                            std::cout << buttons[i].name << " presionado!" << std::endl;
-                        }
+                for (int i = 0; i < buttonCount; i++) {
+                    sf::FloatRect bounds = buttons[i].shape.getGlobalBounds();
+                    if (bounds.contains(static_cast<float>(mouseX), static_cast<float>(mouseY))) {
+                        std::cout << buttons[i].name << " presionado!" << std::endl;
                     }
                 }
             }

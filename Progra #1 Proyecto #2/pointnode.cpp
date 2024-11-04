@@ -15,23 +15,23 @@ PointNode::PointNode(string name, int x, int y) {
     this->prev = nullptr;
 }
 
-string PointNode::getName() {
+string PointNode::getName() const{
     return this->name;
 }
 
-int PointNode::getX() {
+int PointNode::getX() const{
     return this->x;
 }
 
-int PointNode::getY() {
+int PointNode::getY() const{
     return this->y;
 }
 
-PointNode* PointNode::getNext() {
+PointNode* PointNode::getNext() const{
     return this->next;
 }
 
-PointNode* PointNode::getPrev() {
+PointNode* PointNode::getPrev() const{
     return this->prev;
 }
 
@@ -57,8 +57,21 @@ void PointNode::setPrev(PointNode* prev) {
 
 // PointList //
 
+PointNode* PointList::getHead() const {
+    return head;
+}
+
 PointList::PointList() {
     this->head = nullptr;
+}
+
+PointList::~PointList() {
+    PointNode* current = head;
+    while (current != nullptr) {
+        PointNode* next = current->getNext();
+        delete current;
+        current = next;
+    }
 }
 
 void PointList::insertPoint(string name, int x, int y) {
@@ -76,7 +89,7 @@ void PointList::insertPoint(string name, int x, int y) {
     }
 }
 
-bool PointList::isUniqueName(string name) {
+bool PointList::isUniqueName(std::string name) const {
     PointNode* current = head;
     while (current != nullptr) {
         if (current->getName() == name) {
@@ -87,7 +100,7 @@ bool PointList::isUniqueName(string name) {
     return true;
 }
 
-void PointList::displayPoints() {
+void PointList::displayPoints() const{
     PointNode* current = head;
     while (current != nullptr) {
         std::cout << current->getName() << ", ";
