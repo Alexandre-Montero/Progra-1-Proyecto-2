@@ -4,3 +4,21 @@
 
 > [!NOTE]
 > 22/10/2024: Modificación de algunas cosas en las clases y creacion de las funciones para desplegar el mapa completamente funcional todo se encuentra en la clase graphics.
+
+> [!NOTE]
+> 27/10/2024: Modificación de la clases noderute y nodepoint y eliminación de algunas clases ya no necesarias.
+
+> [!NOTE]
+> 28/10/2024: Agregación y funcionalidad de los botones alrededor del mapa.
+
+> [!NOTE]
+> 31/10/2024: Modificación de los botones existentes y agregación de uno mas adicional.
+
+> [!NOTE]
+> 04/11/2024: Modificación de las clases para poder agregar y guardar las rutas en archivos .txt para evitar su perdida y carga a la hora de abrir el mapa.
+
+> [!NOTE]
+> 07/11/2024: Creación de la structura de los botones y agregación de la funcionalidad de obtener coordenadas mientras el programa se ejecuta.
+
+> [!IMPORTANT]
+> 17/11/2024: Entrega Final del Proyecto Completo.
