@@ -1,23 +1,8 @@
-﻿  filemanager.cpp
-  graphics.cpp
-C:\Users\Alex\Proyectos de Programacion I\Progra (12,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-  (compilando archivo de origen "../../Progra%20#1%20Proyecto%20#2/Progra%20#1%20Proyecto%20#2/filemanager.cpp")
-  
-C:\Users\Alex\Proyectos de Programacion I\Progra (12,39): error C2143: error de sintaxis: falta ',' delante de '&'
-  (compilando archivo de origen "../../Progra%20#1%20Proyecto%20#2/Progra%20#1%20Proyecto%20#2/filemanager.cpp")
-  
-C:\Users\Alex\Proyectos de Programacion I\Progra (13,26): error C2061: error de sintaxis: identificador 'RouteList'
-  (compilando archivo de origen "../../Progra%20#1%20Proyecto%20#2/Progra%20#1%20Proyecto%20#2/filemanager.cpp")
-  
-C:\Users\Alex\Proyectos de Programacion I\Progra (6,19): error C2511: 'void FileManager::saveRoutesToFile(const RouteList &,const std::string &) const': la función miembro sobrecargada no se ha encontrado en 'FileManager'
-      C:\Users\Alex\Proyectos de Programacion I\Progra (8,7):
-      vea la declaración de 'FileManager'
-  
-C:\Users\Alex\Proyectos de Programacion I\Progra (32,19): error C2511: 'void FileManager::loadRoutesFromFile(RouteList &,const std::string &) const': la función miembro sobrecargada no se ha encontrado en 'FileManager'
-      C:\Users\Alex\Proyectos de Programacion I\Progra (8,7):
-      vea la declaración de 'FileManager'
-  
-  main.cpp
-  pointnode.cpp
-  rutenode.cpp
-  program.cpp
+﻿  graphics.cpp
+C:\Users\Alex\Proyectos de Programacion I\Progra (11,21): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  Generando código
+  2 of 123 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe
