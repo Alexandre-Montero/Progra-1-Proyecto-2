@@ -2,6 +2,7 @@
 #define GRAPHICS_H
 
 #include <iostream>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
@@ -9,7 +10,7 @@
 using namespace std;
 
 const int MAX_BUTTONS = 10;
-const int MAX_POINTS = 20;
+const int MAX_POINTS = 120;
 
 struct Button {
     sf::RectangleShape shape;
@@ -42,11 +43,16 @@ private:
     Point points[MAX_POINTS];
     int pointCount = 0;
 
+    sf::Vector2f pointPositions[MAX_POINTS];
+    sf::Vector2f splinePoints[MAX_POINTS * 20];
+    int splinePointCount = 0;
+
 public:
     graphics();
     void displayMap();
     void addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name);
     void addPoint(float x, float y, int radius, sf::Color color, const std::string& pointName);
+    void calculateSplinePoints();
 };
 
 #endif // GRAPHICS_H
