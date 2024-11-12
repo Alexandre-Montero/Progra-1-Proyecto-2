@@ -96,6 +96,18 @@ void graphics::displayMap() {
     sf::RenderWindow window(sf::VideoMode(mapTexture.getSize().x, mapTexture.getSize().y), "Rutas Turísticas");
     sf::Color lineAndPointColor = sf::Color::Green;
     float lineThickness = 5.0f;
+    bool isEditMode = false;
+    bool isAddRouteMode = false;
+    bool colorPaletteActive = false;
+
+    sf::Clock delayClock;
+    sf::Clock inactivityClock;
+    sf::Time delayTime = sf::milliseconds(500);
+    sf::Time idleTimeout = sf::seconds(3);
+    bool waitForFirstClick = false;
+
+    std::vector<sf::Color> colorOptions = { sf::Color::Green, sf::Color::Red, sf::Color::Blue, sf::Color::Yellow, sf::Color::Black, sf::Color::Cyan };
+    int currentColorIndex = 0;
 
     while (window.isOpen()) {
         sf::Event event;
@@ -113,16 +125,45 @@ void graphics::displayMap() {
                 int mouseX = event.mouseButton.x;
                 int mouseY = event.mouseButton.y;
 
-                addPoint(static_cast<float>(mouseX), static_cast<float>(mouseY), 6, sf::Color::Red, "Nuevo Punto");
-                calculateSplinePoints();
-
                 for (int i = 0; i < buttonCount; i++) {
                     sf::FloatRect bounds = buttons[i].shape.getGlobalBounds();
                     if (bounds.contains(static_cast<float>(mouseX), static_cast<float>(mouseY))) {
                         std::cout << buttons[i].name << " presionado!" << std::endl;
+
+                        if (buttons[i].name == "Agregar Ruta") {
+                            isAddRouteMode = true;
+                            waitForFirstClick = true;
+                            delayClock.restart();
+                            inactivityClock.restart();
+
+                        }
+
+                        if (buttons[i].name == "Editar Ruta") {
+                            isEditMode = !isEditMode;
+                            std::cout << "Modo de edicion " << (isEditMode ? "activado" : "desactivado") << std::endl;
+                        }
+
+                        if (buttons[i].name == "Paleta de Colores" && isEditMode) {
+                            colorPaletteActive = true;
+                            currentColorIndex = (currentColorIndex + 1) % colorOptions.size();
+                            lineAndPointColor = colorOptions[currentColorIndex];
+                            std::cout << "Color cambiado a " << currentColorIndex << std::endl;
+                        }
                     }
                 }
+                if (isAddRouteMode && !waitForFirstClick && delayClock.getElapsedTime() >= delayTime) {
+                    addPoint(static_cast<float>(mouseX), static_cast<float>(mouseY), 6, lineAndPointColor, "Nuevo Punto");
+                    calculateSplinePoints();
+                }
+
+                waitForFirstClick = false;
+                inactivityClock.restart();
             }
+        }
+
+        if (isAddRouteMode && inactivityClock.getElapsedTime() >= idleTimeout) {
+            isAddRouteMode = false;
+            std::cout << "Modo de agregar ruta desactivado por inactividad" << std::endl;
         }
 
         window.clear();
@@ -130,6 +171,9 @@ void graphics::displayMap() {
         window.draw(mapSprite);
 
         for (int i = 0; i < buttonCount; i++) {
+            if (buttons[i].name == "Paleta de Colores" && !isEditMode) {
+                continue;
+            }
             window.draw(buttons[i].shape);
         }
 
