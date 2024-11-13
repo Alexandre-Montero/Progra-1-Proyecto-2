@@ -20,5 +20,8 @@
 > [!NOTE]
 > 07/11/2024: Creación de la structura de los botones y agregación de la funcionalidad de obtener coordenadas mientras el programa se ejecuta.
 
+> [!NOTE]
+> 11/11/2024: Modificación de la clase graphics agregación de varias funciones con sus condiciones para evitar errores, completamente funcionales, cambio de colores atraves del boton de paletas de colores funcional al igual que se despliegue este boton apartir del boton de edicion.
+
 > [!IMPORTANT]
 > 17/11/2024: Entrega Final del Proyecto Completo.
