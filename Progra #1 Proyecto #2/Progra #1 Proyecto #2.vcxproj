@@ -151,14 +151,14 @@ sfml-graphics.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pointnode.cpp" />
-    <ClCompile Include="rutenode.cpp" />
+    <ClCompile Include="routenode.cpp" />
     <ClCompile Include="program.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="filemanager.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="pointnode.h" />
-    <ClInclude Include="rutenode.h" />
+    <ClInclude Include="routenode.h" />
     <ClInclude Include="program.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

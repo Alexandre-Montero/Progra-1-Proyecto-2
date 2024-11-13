@@ -1,13 +1,23 @@
+#ifndef FILEMANAGER_H
+#define FILEMANAGER_H
+
 #include <iostream>
 #include <fstream>
-#include <iostream>
+#include <sstream>
 #include <string>
+#include "routenode.h" 
 
-using namespace std;
+class RouteList;
 
 class FileManager {
 private:
+    std::string filename;
 
 public:
+    FileManager(const std::string& filename);
 
+    void saveRoutes(const RouteList& routeList);
+    void loadRoutes(RouteList& routeList);
 };
+
+#endif // FILEMANAGER_H

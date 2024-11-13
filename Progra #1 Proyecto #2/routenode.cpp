@@ -1,4 +1,4 @@
-#include "rutenode.h"
+#include "routenode.h"
 
 // RuteNode //
 
@@ -11,15 +11,6 @@ RouteNode::RouteNode(string name) {
     this->name = name;
     this->next = nullptr;
     this->prev = nullptr;
-}
-
-RouteList::~RouteList() {
-    RouteNode* current = head;
-    while (current != nullptr) {
-        RouteNode* next = current->getNext();
-        delete current;
-        current = next;
-    }
 }
 
 string RouteNode::getName() const{
@@ -56,15 +47,26 @@ void RouteNode::setPrev(RouteNode* prev) {
 
 // RouteList //
 
-RouteNode* RouteList::getHead() const {
-    return head;
+RouteList::RouteList() : head(nullptr) {
+    FileManager fileManager("routes.txt");
+    fileManager.loadRoutes(*this);
 }
 
-RouteList::RouteList() {
-    this->head = nullptr;
+RouteList::~RouteList() {
+    FileManager fileManager("routes.txt");
+    fileManager.saveRoutes(*this);
+
+    RouteNode* current = head;
+    while (current != nullptr) {
+        RouteNode* next = current->getNext();
+        delete current;
+        current = next;
+    }
 }
 
-void RouteList::insertRoute(string name) {
+RouteNode* RouteList::getHead() const { return head; }
+
+void RouteList::insertRoute(std::string name) {
     RouteNode* newNode = new RouteNode(name);
     if (head == nullptr) {
         head = newNode;
@@ -79,7 +81,7 @@ void RouteList::insertRoute(string name) {
     }
 }
 
-RouteNode* RouteList::searchRoute(const string& name) const{
+RouteNode* RouteList::searchRoute(const std::string& name) const {
     RouteNode* current = head;
     while (current != nullptr) {
         if (current->getName() == name) {
@@ -90,7 +92,7 @@ RouteNode* RouteList::searchRoute(const string& name) const{
     return nullptr;
 }
 
-bool RouteList::isUniqueName(const string& name) const{
+bool RouteList::isUniqueName(const std::string& name) const {
     RouteNode* current = head;
     while (current != nullptr) {
         if (!current->getPointList().isUniqueName(name)) {
@@ -101,22 +103,22 @@ bool RouteList::isUniqueName(const string& name) const{
     return true;
 }
 
-void RouteList::insertPointToRoute(string routeName) {
+void RouteList::insertPointToRoute(std::string routeName) {
     RouteNode* current = head;
     while (current != nullptr && current->getName() != routeName) {
         current = current->getNext();
     }
     if (current != nullptr) {
-        string pointName;
-        cout << "Nombre del punto: ";
-        cin >> pointName;
+        std::string pointName;
+        std::cout << "Nombre del punto: ";
+        std::cin >> pointName;
         if (isUniqueName(pointName)) {
             current->getPointList().insertPoint(pointName, 50, 100);
         }
     }
 }
 
-void RouteList::removeRoute(const string& name) {
+void RouteList::removeRoute(const std::string& name) {
     if (head == nullptr) return;
 
     if (head->getName() == name) {
@@ -140,7 +142,7 @@ void RouteList::removeRoute(const string& name) {
     }
 }
 
-void RouteList::displayRoutes() const{
+void RouteList::displayRoutes() const {
     RouteNode* current = head;
     while (current != nullptr) {
         std::cout << current->getName() << ", ";
