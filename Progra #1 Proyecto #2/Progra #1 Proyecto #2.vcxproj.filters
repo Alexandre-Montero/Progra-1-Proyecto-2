@@ -27,7 +27,7 @@
     <ClCompile Include="filemanager.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="rutenode.cpp">
+    <ClCompile Include="routenode.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="pointnode.cpp">
@@ -44,7 +44,7 @@
     <ClInclude Include="filemanager.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="rutenode.h">
+    <ClInclude Include="routenode.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="pointnode.h">

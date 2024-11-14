@@ -12,5 +12,8 @@ int main() {
 	Map.displayMap();
 	FileManager fileOfRutes("Archivo de rutas.txt");
 	fileOfRutes.createFile();
+	RouteList routeList;
+	fileOfRutes.askForRouteName(routeList);
+	fileOfRutes.saveRoutes(routeList);
 	return 0;
 }

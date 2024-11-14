@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "pointnode.h"
+#include "filemanager.h"
 
 using namespace std;
 
@@ -26,7 +27,6 @@ public:
     void setPointList(const PointList& pointList);
     void setNext(RouteNode* next);
     void setPrev(RouteNode* prev);
-
 };
 
 class RouteList {
@@ -44,7 +44,6 @@ public:
     void insertPointToRoute(std::string routeName);
     void removeRoute(const std::string& name);
     void displayRoutes() const;
-
 };
 
 #endif
