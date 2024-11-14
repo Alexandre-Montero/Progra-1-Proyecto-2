@@ -2,6 +2,7 @@
 
 FileManager::FileManager(const std::string& filename) : filename(filename) {}
 
+<<<<<<< HEAD
 void FileManager::createFile() {
     std::ofstream file(filename);  
     if (!file.is_open()) {
@@ -38,6 +39,33 @@ void FileManager::saveRoutes(const RouteList& routeList) {
     file.close();
 }
 
+=======
+void FileManager::saveRoutes(const RouteList& routeList) {
+    std::ofstream file(filename);
+
+    if (!file.is_open()) {
+        std::cerr << "Error al abrir el archivo para guardar las rutas.\n";
+        return;
+    }
+
+    RouteNode* currentRoute = routeList.getHead();
+    while (currentRoute) {
+        file << "Route: " << currentRoute->getName() << "\n";
+
+        PointNode* currentPoint = currentRoute->getPointList().getHead();
+        while (currentPoint) {
+            file << "Point: " << currentPoint->getName() << " "
+                << currentPoint->getX() << " "
+                << currentPoint->getY() << "\n";
+            currentPoint = currentPoint->getNext();
+        }
+
+        currentRoute = currentRoute->getNext();
+    }
+    file.close();
+}
+
+>>>>>>> 10fb90c17ac632f56158ead0ec89a270a1bd5b53
 void FileManager::loadRoutes(RouteList& routeList) {
     std::ifstream file(filename);
 
@@ -70,6 +98,7 @@ void FileManager::loadRoutes(RouteList& routeList) {
 
     file.close();
 }
+<<<<<<< HEAD
 void FileManager::askForRouteName(RouteList& routeList) {
     std::string routeName;
     std::cout << "Introduce el nombre de la ruta (por ejemplo, 'Ruta #1'): ";
@@ -78,3 +107,5 @@ void FileManager::askForRouteName(RouteList& routeList) {
     routeList.insertRoute(routeName);  
     std::cout << "Ruta '" << routeName << "' agregada correctamente.\n";
 }
+=======
+>>>>>>> 10fb90c17ac632f56158ead0ec89a270a1bd5b53

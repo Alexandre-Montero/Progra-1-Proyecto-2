@@ -59,7 +59,7 @@ void graphics::addPoint(float x, float y, int radius, sf::Color color, const std
         pointCount++;
     }
     else {
-        std::cout << "No se pueden agregar más puntos. Máximo alcanzado: " << MAX_POINTS << std::endl;
+        std::cout << "No se pueden agregar mas puntos. Maximo alcanzado: " << MAX_POINTS << std::endl;
     }
 }
 

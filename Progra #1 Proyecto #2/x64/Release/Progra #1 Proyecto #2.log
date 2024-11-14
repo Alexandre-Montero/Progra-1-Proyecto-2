@@ -1,13 +1,6 @@
-﻿  filemanager.cpp
-  graphics.cpp
-C:\Users\Alex\Proyectos de Programacion I\Progra (11,21): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Alex\Proyectos de Programacion I\Progra (196,29): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  main.cpp
-  pointnode.cpp
-  rutenode.cpp
-  program.cpp
+﻿  routenode.cpp
   Generando código
   Previous IPDB not found, fall back to full compilation.
-  All 178 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 259 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Generación de código finalizada
   Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe
