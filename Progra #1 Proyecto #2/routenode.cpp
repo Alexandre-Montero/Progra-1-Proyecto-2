@@ -13,11 +13,9 @@ RouteNode::RouteNode(string name) {
     this->prev = nullptr;
 }
 
-<<<<<<< HEAD
-string RouteNode::getName() const {
-=======
+
+
 string RouteNode::getName() const{
->>>>>>> 10fb90c17ac632f56158ead0ec89a270a1bd5b53
     return this->name;
 }
 
