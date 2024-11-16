@@ -14,7 +14,7 @@ Point::Point(float x, float y, int radius, sf::Color color, const std::string& p
     name = pointName;
 }
 
-graphics::graphics() {
+graphics::graphics() : fileManager("Archivo de rutas.txt") {
     if (!mapTexture.loadFromFile("MapCR.png")) {
         std::cout << "Error al cargar la imagen MapCR.png\n";
     }
@@ -39,7 +39,9 @@ graphics::graphics() {
     addButton(1196, 135, 50, 40, addButtonTexture, "Agregar Ruta");
     addButton(1196, 180, 50, 40, editButtonTexture, "Editar Ruta");
     addButton(1196, 225, 50, 40, deleteButtonTexture, "Borrar Ruta");
-    addButton(15, 400, 50, 40, colorsButtonTexture, "Paleta de Colores");
+
+    fileManager.createFile();
+    fileManager.loadRoutes(routeList);
 }
 
 void graphics::addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name) {
@@ -48,7 +50,7 @@ void graphics::addButton(float x, float y, float width, float height, sf::Textur
         buttonCount++;
     }
     else {
-        std::cout << "No se pueden agregar más botones. Máximo alcanzado: " << MAX_BUTTONS << std::endl;
+        std::cout << "No se pueden agregar mas botones. Maximo alcanzado: " << MAX_BUTTONS << std::endl;
     }
 }
 
@@ -135,12 +137,23 @@ void graphics::displayMap() {
                             waitForFirstClick = true;
                             delayClock.restart();
                             inactivityClock.restart();
+                            fileManager.askForRouteName(routeList);
+                            fileManager.saveRoutes(routeList);
 
                         }
 
                         if (buttons[i].name == "Editar Ruta") {
                             isEditMode = !isEditMode;
                             std::cout << "Modo de edicion " << (isEditMode ? "activado" : "desactivado") << std::endl;
+                            if (isEditMode) {
+                                fileManager.editRoute(routeList);
+                                fileManager.saveRoutes(routeList);
+                            }
+                        }
+
+                        if (buttons[i].name == "Borrar Ruta") {
+                            fileManager.deleteRoute(routeList);
+                            fileManager.saveRoutes(routeList);
                         }
 
                         if (buttons[i].name == "Paleta de Colores" && isEditMode) {
@@ -151,6 +164,7 @@ void graphics::displayMap() {
                         }
                     }
                 }
+
                 if (isAddRouteMode && !waitForFirstClick && delayClock.getElapsedTime() >= delayTime) {
                     addPoint(static_cast<float>(mouseX), static_cast<float>(mouseY), 6, lineAndPointColor, "Nuevo Punto");
                     calculateSplinePoints();
