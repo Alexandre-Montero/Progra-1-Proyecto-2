@@ -6,6 +6,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
+#include "filemanager.h"
+#include "routenode.h"
 
 using namespace std;
 
@@ -47,6 +49,9 @@ private:
     sf::Vector2f splinePoints[MAX_POINTS * 20];
     int splinePointCount = 0;
 
+    FileManager fileManager;
+    RouteList routeList;
+
 public:
     graphics();
     void displayMap();
@@ -55,4 +60,4 @@ public:
     void calculateSplinePoints();
 };
 
-#endif // GRAPHICS_H
+#endif

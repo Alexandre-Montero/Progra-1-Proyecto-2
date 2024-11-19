@@ -4,15 +4,23 @@ FileManager::FileManager(const std::string& filename) : filename(filename) {}
 
 
 void FileManager::createFile() {
-    std::ofstream file(filename);  
+
+    std::ifstream existingFile(filename);
+    if (existingFile.is_open()) {
+        std::cout << "El archivo ya existe: " << filename << "\n";
+        existingFile.close();
+        return; 
+    }
+
+    std::ofstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Error al crear el archivo.\n";
         return;
     }
     std::cout << "Archivo creado correctamente: " << filename << "\n";
     file.close();
-
 }
+
 
 void FileManager::saveRoutes(const RouteList& routeList) {
     std::ofstream file(filename);
