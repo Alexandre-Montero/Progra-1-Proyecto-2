@@ -14,7 +14,7 @@ Point::Point(float x, float y, int radius, sf::Color color, const std::string& p
     name = pointName;
 }
 
-graphics::graphics() {
+graphics::graphics() : fileManager("Archivo de rutas.txt") {
     if (!mapTexture.loadFromFile("MapCR.png")) {
         std::cout << "Error al cargar la imagen MapCR.png\n";
     }
@@ -35,11 +35,19 @@ graphics::graphics() {
     if (!colorsButtonTexture.loadFromFile("colorButton.png")) {
         std::cout << "Error al cargar la imagen colorButton.png\n";
     }
+    if (!colorsButtonTexture.loadFromFile("colorButton.png")) {
+        std::cout << "Error al cargar la imagen colorButton.png\n";
+    }
+
 
     addButton(1196, 135, 50, 40, addButtonTexture, "Agregar Ruta");
     addButton(1196, 180, 50, 40, editButtonTexture, "Editar Ruta");
     addButton(1196, 225, 50, 40, deleteButtonTexture, "Borrar Ruta");
-    addButton(15, 400, 50, 40, colorsButtonTexture, "Paleta de Colores");
+    addButton(1196, 270, 50, 40, colorsButtonTexture, "Paleta de Colores");
+
+
+    fileManager.createFile();
+    fileManager.loadRoutes(routeList);
 }
 
 void graphics::addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name) {
@@ -48,7 +56,7 @@ void graphics::addButton(float x, float y, float width, float height, sf::Textur
         buttonCount++;
     }
     else {
-        std::cout << "No se pueden agregar más botones. Máximo alcanzado: " << MAX_BUTTONS << std::endl;
+        std::cout << "No se pueden agregar mas botones. Maximo alcanzado: " << MAX_BUTTONS << std::endl;
     }
 }
 
@@ -59,7 +67,7 @@ void graphics::addPoint(float x, float y, int radius, sf::Color color, const std
         pointCount++;
     }
     else {
-        std::cout << "No se pueden agregar más puntos. Máximo alcanzado: " << MAX_POINTS << std::endl;
+        std::cout << "No se pueden agregar mas puntos. Maximo alcanzado: " << MAX_POINTS << std::endl;
     }
 }
 
@@ -98,12 +106,11 @@ void graphics::displayMap() {
     float lineThickness = 5.0f;
     bool isEditMode = false;
     bool isAddRouteMode = false;
-    bool colorPaletteActive = false;
 
     sf::Clock delayClock;
     sf::Clock inactivityClock;
     sf::Time delayTime = sf::milliseconds(500);
-    sf::Time idleTimeout = sf::seconds(3);
+    sf::Time idleTimeout = sf::seconds(5);
     bool waitForFirstClick = false;
 
     std::vector<sf::Color> colorOptions = { sf::Color::Green, sf::Color::Red, sf::Color::Blue, sf::Color::Yellow, sf::Color::Black, sf::Color::Cyan };
@@ -135,22 +142,32 @@ void graphics::displayMap() {
                             waitForFirstClick = true;
                             delayClock.restart();
                             inactivityClock.restart();
-
+                            fileManager.askForRouteName(routeList);
+                            fileManager.saveRoutes(routeList);
                         }
 
                         if (buttons[i].name == "Editar Ruta") {
                             isEditMode = !isEditMode;
                             std::cout << "Modo de edicion " << (isEditMode ? "activado" : "desactivado") << std::endl;
+                            if (isEditMode) {
+                                fileManager.editRoute(routeList);
+                                fileManager.saveRoutes(routeList);
+                            }
                         }
 
-                        if (buttons[i].name == "Paleta de Colores" && isEditMode) {
-                            colorPaletteActive = true;
+                        if (buttons[i].name == "Borrar Ruta") {
+                            fileManager.deleteRoute(routeList);
+                            fileManager.saveRoutes(routeList);
+                        }
+
+                        if (buttons[i].name == "Paleta de Colores") {
                             currentColorIndex = (currentColorIndex + 1) % colorOptions.size();
                             lineAndPointColor = colorOptions[currentColorIndex];
                             std::cout << "Color cambiado a " << currentColorIndex << std::endl;
                         }
                     }
                 }
+
                 if (isAddRouteMode && !waitForFirstClick && delayClock.getElapsedTime() >= delayTime) {
                     addPoint(static_cast<float>(mouseX), static_cast<float>(mouseY), 6, lineAndPointColor, "Nuevo Punto");
                     calculateSplinePoints();
@@ -171,9 +188,6 @@ void graphics::displayMap() {
         window.draw(mapSprite);
 
         for (int i = 0; i < buttonCount; i++) {
-            if (buttons[i].name == "Paleta de Colores" && !isEditMode) {
-                continue;
-            }
             window.draw(buttons[i].shape);
         }
 

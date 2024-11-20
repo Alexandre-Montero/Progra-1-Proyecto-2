@@ -1,14 +1,10 @@
 #include <iostream>
+#include "filemanager.h"
 #include "graphics.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-
-using namespace std;
 
 int main() {
-	graphics Map;
-	Map.displayMap();
+    graphics Map;
 
-	return 0;
+    Map.displayMap();
+    return 0;
 }

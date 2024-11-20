@@ -20,5 +20,14 @@
 > [!NOTE]
 > 07/11/2024: Creación de la structura de los botones y agregación de la funcionalidad de obtener coordenadas mientras el programa se ejecuta.
 
+> [!NOTE]
+> 11/11/2024: Modificación de la clase graphics agregación de varias funciones con sus condiciones para evitar errores, completamente funcionales, cambio de colores atraves del boton de paletas de colores funcional al igual que se despliegue este boton apartir del boton de edicion.
+
+> [!NOTE]
+> 13/11/2024: Modificación de la clase graphics, filemanager y routenode para implementar las funciones de guardado, solicitud y carga de nombres de las rutas.
+
+> [!NOTE]
+> 15/11/2024: Modificación de la clase graphics y su archivo para agregarle las funciones a los botones para volverlos funcionales. 
+
 > [!IMPORTANT]
-> 17/11/2024: Entrega Final del Proyecto Completo.
+> 19/11/2024: Entrega Final del Proyecto.

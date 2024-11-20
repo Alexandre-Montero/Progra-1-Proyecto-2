@@ -37,7 +37,7 @@ private:
 
 public:
     PointList();
-    ~PointList();  // Destructor agregado
+    ~PointList();  
 
     PointNode* getHead() const;
     void insertPoint(std::string name, int x, int y);
@@ -46,4 +46,4 @@ public:
 
 };
 
-#endif // POINTNODE_H
+#endif

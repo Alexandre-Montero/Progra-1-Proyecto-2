@@ -1,13 +1,12 @@
 ﻿  filemanager.cpp
   graphics.cpp
-C:\Users\Alex\Proyectos de Programacion I\Progra (11,21): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Alex\Proyectos de Programacion I\Progra (196,29): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\Progra #1 Proyecto #2\graphics.cpp(11,21): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\Progra #1 Proyecto #2\graphics.cpp(154,29): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
   main.cpp
   pointnode.cpp
-  rutenode.cpp
+  routenode.cpp
   program.cpp
-  Generando código
-  Previous IPDB not found, fall back to full compilation.
-  All 178 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Generación de código finalizada
-  Progra #1 Proyecto #2.vcxproj -> C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe
+graphics.obj : error LNK2001: símbolo externo "public: void __cdecl graphics::calculateSplinePoints(void)" (?calculateSplinePoints@graphics@@QEAAXXZ) sin resolver
+graphics.obj : error LNK2001: símbolo externo "public: void __cdecl graphics::addPoint(float,float,int,class sf::Color,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?addPoint@graphics@@QEAAXMMHVColor@sf@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) sin resolver
+graphics.obj : error LNK2001: símbolo externo "public: void __cdecl graphics::addButton(float,float,float,float,class sf::Texture &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?addButton@graphics@@QEAAXMMMMAEAVTexture@sf@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) sin resolver
+C:\Users\Alex\Proyectos de Programacion I\Progra #1 Proyecto #2\x64\Release\Progra #1 Proyecto #2.exe : fatal error LNK1120: 3 externos sin resolver
