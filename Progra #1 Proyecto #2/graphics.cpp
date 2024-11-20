@@ -39,59 +39,9 @@ graphics::graphics() : fileManager("Archivo de rutas.txt") {
     addButton(1196, 135, 50, 40, addButtonTexture, "Agregar Ruta");
     addButton(1196, 180, 50, 40, editButtonTexture, "Editar Ruta");
     addButton(1196, 225, 50, 40, deleteButtonTexture, "Borrar Ruta");
-
+    addButton(1196, 270, 50, 40, colorsButtonTexture, "Cambiar Colores");
     fileManager.createFile();
     fileManager.loadRoutes(routeList);
-}
-
-void graphics::addButton(float x, float y, float width, float height, sf::Texture& texture, const std::string& name) {
-    if (buttonCount < MAX_BUTTONS) {
-        buttons[buttonCount] = Button(x, y, width, height, texture, name);
-        buttonCount++;
-    }
-    else {
-        std::cout << "No se pueden agregar mas botones. Maximo alcanzado: " << MAX_BUTTONS << std::endl;
-    }
-}
-
-void graphics::addPoint(float x, float y, int radius, sf::Color color, const std::string& name) {
-    if (pointCount < MAX_POINTS) {
-        points[pointCount] = Point(x, y, radius, color, name);
-        pointPositions[pointCount] = sf::Vector2f(x, y);
-        pointCount++;
-    }
-    else {
-        std::cout << "No se pueden agregar mas puntos. Maximo alcanzado: " << MAX_POINTS << std::endl;
-    }
-}
-
-void graphics::calculateSplinePoints() {
-    splinePointCount = 0;
-
-    if (pointCount < 2) return;
-
-    for (int i = 0; i < pointCount - 1 && splinePointCount < MAX_POINTS * 20; i++) {
-        sf::Vector2f p0 = (i == 0) ? pointPositions[i] : pointPositions[i - 1];
-        sf::Vector2f p1 = pointPositions[i];
-        sf::Vector2f p2 = pointPositions[i + 1];
-        sf::Vector2f p3 = (i + 2 < pointCount) ? pointPositions[i + 2] : pointPositions[i + 1];
-
-        for (int j = 0; j < 20 && splinePointCount < MAX_POINTS * 20; j++) {
-            float t = j / 20.0f;
-            float tt = t * t;
-            float ttt = tt * t;
-
-            float q1 = -ttt + 2 * tt - t;
-            float q2 = 3 * ttt - 5 * tt + 2;
-            float q3 = -3 * ttt + 4 * tt + t;
-            float q4 = ttt - tt;
-
-            float x = 0.5f * (p0.x * q1 + p1.x * q2 + p2.x * q3 + p3.x * q4);
-            float y = 0.5f * (p0.y * q1 + p1.y * q2 + p2.y * q3 + p3.y * q4);
-
-            splinePoints[splinePointCount++] = sf::Vector2f(x, y);
-        }
-    }
 }
 
 void graphics::displayMap() {
@@ -100,7 +50,6 @@ void graphics::displayMap() {
     float lineThickness = 5.0f;
     bool isEditMode = false;
     bool isAddRouteMode = false;
-    bool colorPaletteActive = false;
 
     sf::Clock delayClock;
     sf::Clock inactivityClock;
@@ -139,7 +88,6 @@ void graphics::displayMap() {
                             inactivityClock.restart();
                             fileManager.askForRouteName(routeList);
                             fileManager.saveRoutes(routeList);
-
                         }
 
                         if (buttons[i].name == "Editar Ruta") {
@@ -156,11 +104,10 @@ void graphics::displayMap() {
                             fileManager.saveRoutes(routeList);
                         }
 
-                        if (buttons[i].name == "Paleta de Colores" && isEditMode) {
-                            colorPaletteActive = true;
+                        if (buttons[i].name == "Cambiar Colores") {
                             currentColorIndex = (currentColorIndex + 1) % colorOptions.size();
                             lineAndPointColor = colorOptions[currentColorIndex];
-                            std::cout << "Color cambiado a " << currentColorIndex << std::endl;
+                            std::cout << "Color cambiado a: " << currentColorIndex << std::endl;
                         }
                     }
                 }
@@ -185,9 +132,6 @@ void graphics::displayMap() {
         window.draw(mapSprite);
 
         for (int i = 0; i < buttonCount; i++) {
-            if (buttons[i].name == "Paleta de Colores" && !isEditMode) {
-                continue;
-            }
             window.draw(buttons[i].shape);
         }
 

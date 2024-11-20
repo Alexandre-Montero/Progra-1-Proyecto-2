@@ -15,7 +15,7 @@ RouteNode::RouteNode(string name) {
 
 
 
-string RouteNode::getName() const{
+string RouteNode::getName() const {
     return this->name;
 }
 
@@ -50,12 +50,12 @@ void RouteNode::setPrev(RouteNode* prev) {
 // RouteList //
 
 RouteList::RouteList() : head(nullptr) {
-    FileManager fileManager("routes.txt");
+    FileManager fileManager("Archivo de rutas.txt");
     fileManager.loadRoutes(*this);
 }
 
 RouteList::~RouteList() {
-    FileManager fileManager("routes.txt");
+    FileManager fileManager("Archivo de rutas.txt");
     fileManager.saveRoutes(*this);
 
     RouteNode* current = head;

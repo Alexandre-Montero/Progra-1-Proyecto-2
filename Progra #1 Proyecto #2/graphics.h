@@ -60,8 +60,4 @@ public:
     void calculateSplinePoints();
 };
 
-<<<<<<< HEAD
 #endif
-=======
-#endif
->>>>>>> 2dddc26832c4271e736b58f46c17c3856733c5b4
